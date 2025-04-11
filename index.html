@@ -3,29 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <title>Prakiraan Cuaca</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"/>
+
 </head>
 <body>
-    <nav class="navbar bg-body-primary">
-        <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1">Prakiraan Cuaca</span>
+  
+    <nav class="navbar bg-body-warning">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="images/rain.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          Informasi Gempa dan Prakiraan Cuaca
+        </a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4" id="gempa-terkini"></div>
+        <div class="col-lg-8">
+          <div class="row" id="list-gempa"></div>
         </div>
-      </nav>
-    <h1>Prakiraan Cuaca</h1>
+      </div>
+      
+      <div class="row">
+        <!-- supaya hasil col nya 12 -->
+        <div class="col-lg-4">
+          <h3>List Desa/Kelurahan</h3>
+          <ul id="list-desa" class="list-group list-group-flush"></ul>
+        </div>
 
-    <h2>List Desa/Kelurahan</h2>
-    <ul id="list-desa"></ul>
+        <div class="col-lg-5">
+          <h3>Cuaca</h3>
+          <p id="desa"></p>
+          <p id="kecamatan"></p>
+          <p id="kotkab"></p>
+          <p id="provinsi"></p>
+    
+          <div id="list-cuaca" class="row"></div>
+        </div>
 
-    <h2>Cuaca</h2>
-    <p id="desa"></p>
-    <p id="kecamatan"></p>
-    <p id="kotkab"></p>
-    <p id="provinsi"></p>
+        <div class="col-lg-3">
+          <h3>Data Gempa</h3>
+          <p id="Wilayah"></p>
+        </div>
+      </div>
 
-    <ul id="list-cuaca"></ul>
+      
 
+      
 
+  </div>
     <script src="script.js"></script>
 </body>
 </html>
