@@ -40,14 +40,14 @@ fetch('https://24252-if21-pw1-omega.vercel.app/javascript/wilayah.json')
 
 //  Akses API data Gempa BMKG
 function gempaterkini(){
-    fetch('https://data.bmkg.go.id.DataMKG/TEWS/autogempa.json')
+    fetch('https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json')
     .then( response => response.json()) 
     .then( data => {
         console.log(data.Infogempa.gempa);
         document.getElementById('gempa-terkini').innerHTML += `
         <div class="card">
-        <img src="https://data/bmkg.go.id/DataMKG/TEWS/${data.Infogempa.gempa.Shakemap} " 
-        class="card-img-top p-2" alt="...">
+            <img src="https://data/bmkg.go.id/DataMKG/TEWS/${data.Infogempa.gempa.Shakemap} " 
+            class="card-img-top p-2" alt="...">
         <div class="card-body">
         <h5 class="card-title">${data.Infogempa.gempa.Wilayah}</h5>
         <p class="card-text">${data.Infogempa.gempa.Potensi} </p>
@@ -56,6 +56,6 @@ function gempaterkini(){
         div class="col">${data.Infogempa.gempa.Jam}</div>
         </div>
         </div>
-        </div>
+        </div>`
     })
 }
